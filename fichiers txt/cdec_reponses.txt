@@ -1,0 +1,73 @@
+# Réponses CDEC numérotées
+
+1. La circulaire a pour objet de clarifier et d'unifier les pratiques concernant **toutes les étapes de la vie d'une garantie** dans les marchés publics. Elle détaille les règles de :
+   * **Constitution** : Comment créer la garantie.
+   * **Consignation** : Comment la déposer auprès de la CDEC.
+   * **Conservation** : Comment elle est stockée.
+   * **Déconsignation & Restitution** : Comment la récupérer.
+   * **Réalisation** : Comment elle est utilisée en cas de défaillance.
+   
+   Elle s'applique à tous les acteurs (MO, titulaires, soumissionnaires) et remplace la circulaire précédente n°00019/LC/MINMAP du 05 juin 2024.
+
+2. La **Caisse des Dépôts et Consignations (CDEC)** est l'établissement public unique mandaté pour :
+   * ✅ **Recevoir** et **consigner** les garanties (argent, documents).
+   * ✅ **Conserver** les originaux des actes de garantie.
+   * ✅ **Restituer** les garanties sur instruction du Maître d'Ouvrage (mainlevée).
+   * ✅ **Réaliser** la garantie (c'est-à-dire encaisser l'argent) sur demande du Maître d'Ouvrage en cas de défaillance.
+   
+   Elle agit **au nom et pour le compte du Maître d'Ouvrage**. Vous devez toujours interagir avec elle pour toute question de dépôt ou de retrait de garantie.
+
+3. Deux types principaux de garanties sont admis :
+   
+   **1. Garanties Principales :**
+   * **Le cautionnement bancaire** (le plus courant)
+   * **La retenue de garantie** (prélevée sur les décomptes)
+   
+   **2. Garanties Subsidiaires (surtout pour les PME nationales) :**
+   * La caution d'un établissement bancaire/financier agréé
+   * La caution personnelle et solidaire d'un dirigeant
+   * Le chèque certifié
+   * Le chèque banque
+   * L'hypothèque légale
+
+4. Le **cautionnement de soumission** (ou provisoire) ne peut pas dépasser **2%** du **coût prévisionnel TTC** (Toutes Taxes Comprises) du marché. C'est le Maître d'Ouvrage qui fixe le montant exact dans le DCE, dans cette limite.
+
+5. Le **cautionnement définitif** (garantissant l'exécution intégrale) est compris entre **2% et 5%** du **montant initial TTC du marché**, majoré le cas échéant du montant de ses avenants.
+
+6. Le cautionnement pour une avance de démarrage est particulier :
+   
+   * Son montant est de **100% du montant de l'avance** accordée.
+   * Seulement **40%** de ce montant doit être **déposé en numéraires** sur le compte de la CDEC.
+   * Les **60%** restants sont couverts par un **engagement de la banque** émettrice, qui devra payer à première demande de la CDEC si le titulaire fait défaut.
+   
+   *Option :* Le titulaire peut demander à ce que les 40% en numéraires soient prélevés directement à la source sur le montant total de l'avance.
+
+7. Dès qu'elle reçoit la **mainlevée** du Maître d'Ouvrage et **toutes les pièces justificatives requises**, la CDEC a un délai maximum de **15 jours ouvrables** pour :
+   
+   1. Vous restituer l'acte original de votre garantie.
+   2. Ordonner le virement des fonds sur votre compte.
+   
+   **Sanction :** Si ce délai n'est pas respecté, vous pouvez mettre la CDEC en demeure. Après 7 jours de plus, elle devra vous payer des **intérêts moratoires**.
+
+8. Dès la **publication de la décision d'attribution du marché**, votre cautionnement de soumission peut être restitué. Vous avez **15 jours ouvrables** à partir de cette publication pour engager les démarches de retrait auprès de la CDEC. La publication de la décision vaut automatiquement mainlevée pour les soumissionnaires non retenus.
+
+9. La **retenue de garantie** ou le **cautionnement de bonne exécution** est libéré à la fin de la **période de garantie** prévue au marché.
+   
+   Le Maître d'Ouvrage doit accorder la **mainlevée dans les 30 jours calendaires** qui suivent la **réception définitive** des prestations. Une fois cette mainlevée obtenue, vous avez 15 jours pour que la CDEC procède à la restitution.
+
+10. En cas de défaillance du titulaire/soumissionnaire constatée selon les règles du CMP :
+    
+    1. Le **Maître d'Ouvrage** envoie un **appel à première demande** à la **CDEC** (avec preuves de la défaillance).
+    2. La **CDEC** notifie immédiatement l'établissement financier émetteur.
+    3. La **CDEC** engage sans délai les procédures pour **recouvrer les fonds** sur le compte de la banque ou **réaliser l'hypothèque**.
+    4. Les sommes recouvrées sont mises à la disposition du MO dans un délai de 15 jours pour pallier la défaillance.
+
+11. Oui, les **PME à capitaux et dirigeants nationaux** (telles que définies par la loi) bénéficient de dispositions particulières. Elles peuvent, **si le DCE le prévoit**, substituer au cautionnement de soumission classique l'une des garanties suivantes :
+    
+    * 🏠 Une hypothèque légale
+    * 📑 Un chèque certifié
+    * 🏦 Un chèque banque
+    * 📝 Une caution personnelle et solidaire d'un dirigeant
+    * 🏛️ La caution d'un établissement bancaire agréé
+    
+    Cette possibilité est souvent limitée aux marchés de faible montant (seuil des lettres-commandes).

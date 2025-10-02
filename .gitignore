@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenv
+Lib/
+Scripts/
+Include/
+pyvenv.cfg
+
+# VSCode
+.vscode/
+
+# Fichiers de données et de statistiques
+historique.json
+stats.json

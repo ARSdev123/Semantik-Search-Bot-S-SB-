@@ -1,0 +1,10 @@
+customtkinter>=5.0.0
+scikit-learn>=1.0.0
+PyMuPDF>=1.19.0
+python-docx>=0.8.11
+PyPDF2>=3.0.0
+spacy>=3.0.0
+fr_core_news_sm @ https://github.com/explosion/spacy-models/releases/download/fr_core_news_sm-3.7.0/fr_core_news_sm-3.7.0-py3-none-any.whl
+fastapi>=0.70.0
+uvicorn[standard]>=0.15.0
+pydantic>=1.8.0

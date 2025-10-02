@@ -1,0 +1,174 @@
+{
+  "faqDataset": {
+    "metadata": {
+      "documentTitle": "Circulaire N° .../MINMAP/CAB du 23 Juillet 2025",
+      "documentSubject": "Modalités de gestion des garanties dans les marchés publics camerounais",
+      "version": "1.0",
+      "lastUpdated": "2025-08-20"
+    },
+    "faqCategories": [
+      {
+        "id": "GEN",
+        "name": "Généralités et Principes",
+        "faqs": [
+          {
+            "id": "GEN-01",
+            "intent": "expliquer_objet_circulaire",
+            "trainingPhrases": [
+              "Quel est l'objet de cette circulaire ?",
+              "De quoi parle ce document ?",
+              "Quel est le problème que cette circulaire résout ?",
+              "Quels sont les sujets abordés dans ce texte ?",
+              "À quoi sert la circulaire de juillet 2025 ?",
+              "Présentez-moi cette circulaire"
+            ],
+            "answer": "La circulaire a pour objet de clarifier et d'unifier les pratiques concernant **toutes les étapes de la vie d'une garantie** dans les marchés publics. Elle détaille les règles de :\n\n*   **Constitution** : Comment créer la garantie.\n*   **Consignation** : Comment la déposer auprès de la CDEC.\n*   **Conservation** : Comment elle est stockée.\n*   **Déconsignation & Restitution** : Comment la récupérer.\n*   **Réalisation** : Comment elle est utilisée en cas de défaillance.\n\nElle s'applique à tous les acteurs (MO, titulaires, soumissionnaires) et remplace la circulaire précédente n°00019/LC/MINMAP du 05 juin 2024.",
+            "keywords": ["objet", "sujet", "but", "finalité", "présentation", "règles", "étapes", "applicabilité"]
+          },
+          {
+            "id": "GEN-02",
+            "intent": "identifier_role_cdec",
+            "trainingPhrases": [
+              "Quel est le rôle de la CDEC ?",
+              "Que fait la Caisse des Dépôts et Consignations ?",
+              "À qui dois-je confier ma garantie ?",
+              "L'organisme chargé des dépôts, c'est qui ?",
+              "Qui conserve les cautionnements ?"
+            ],
+            "answer": "La **Caisse des Dépôts et Consignations (CDEC)** est l'établissement public unique mandaté pour :\n\n*   ✅ **Recevoir** et **consigner** les garanties (argent, documents).\n*   ✅ **Conserver** les originaux des actes de garantie.\n*   ✅ **Restituer** les garanties sur instruction du Maître d'Ouvrage (mainlevée).\n*   ✅ **Réaliser** la garantie (c'est-à-dire encaisser l'argent) sur demande du Maître d'Ouvrage en cas de défaillance.\n\nElle agit **au nom et pour le compte du Maître d'Ouvrage**. Vous devez toujours interagir avec elle pour toute question de dépôt ou de retrait de garantie.",
+            "keywords": ["CDEC", "Caisse des Dépôts", "rôle", "fonction", "mission", "organisme", "conservation", "dépôt"]
+          },
+          {
+            "id": "GEN-03",
+            "intent": "lister_garanties_admises",
+            "trainingPhrases": [
+              "Quelles sont les types de garanties acceptées ?",
+              "Je peux fournir quoi comme caution ?",
+              "Liste des garanties possibles",
+              "Cautionnement, retenue de garantie, c'est tout ?",
+              "Quelles sont les garanties subsidiaires ?"
+            ],
+            "answer": "Deux types principaux de garanties sont admis :\n\n**1. Garanties Principales :**\n*   **Le cautionnement bancaire** (le plus courant)\n*   **La retenue de garantie** (prélevée sur les décomptes)\n\n**2. Garanties Subsidiaires (surtout pour les PME nationales) :**\n*   La caution d'un établissement bancaire/financier agréé\n*   La caution personnelle et solidaire d'un dirigeant\n*   Le chèque certifié\n*   Le chèque banque\n*   L'hypothèque légale",
+            "keywords": ["types", "liste", "admis", "acceptées", "principal", "subsidiaire", "cautionnement", "retenue", "chèque", "hypothèque", "caution personnelle"]
+          }
+        ]
+      },
+      {
+        "id": "CONST",
+        "name": "Constitution des Garanties",
+        "faqs": [
+          {
+            "id": "CONST-01",
+            "intent": "calculer_montant_caution_soumission",
+            "trainingPhrases": [
+              "Comment calculer le montant de la caution de soumission ?",
+              "Quel est le pourcentage pour le cautionnement provisoire ?",
+              "Je dois payer combien pour soumissionner ?",
+              "Plafond de la garantie de soumission"
+            ],
+            "answer": "Le **cautionnement de soumission** (ou provisoire) ne peut pas dépasser **2%** du **coût prévisionnel TTC** (Toutes Taxes Comprises) du marché. C'est le Maître d'Ouvrage qui fixe le montant exact dans le DCE, dans cette limite.",
+            "keywords": ["soumission", "provisoire", "montant", "calcul", "2%", "pourcentage", "coût prévisionnel", "TTC", "plafond"]
+          },
+          {
+            "id": "CONST-02",
+            "intent": "calculer_montant_caution_definitive",
+            "trainingPhrases": [
+              "Montant de la caution définitive ?",
+              "Combien pour la garantie d'exécution ?",
+              "Pourcentage cautionnement définitif"
+            ],
+            "answer": "Le **cautionnement définitif** (garantissant l'exécution intégrale) est compris entre **2% et 5%** du **montant initial TTC du marché**, majoré le cas échéant du montant de ses avenants.",
+            "keywords": ["définitif", "exécution", "montant", "2-5%", "pourcentage", "montant initial", "TTC"]
+          },
+          {
+            "id": "CONST-03",
+            "intent": "regles_avance_demarrage",
+            "trainingPhrases": [
+              "Règles pour la caution d'avance de démarrage ?",
+              "Comment ça marche pour l'avance de démarrage ?",
+              "100% de l'avance, mais comment ?",
+              "40% numéraires, 60% engagement, expliquez"
+            ],
+            "answer": "Le cautionnement pour une avance de démarrage est particulier :\n\n*   Son montant est de **100% du montant de l'avance** accordée.\n*   Seulement **40%** de ce montant doit être **déposé en numéraires** sur le compte de la CDEC.\n*   Les **60%** restants sont couverts par un **engagement de la banque** émettrice, qui devra payer à première demande de la CDEC si le titulaire fait défaut.\n\n*Option :* Le titulaire peut demander à ce que les 40% en numéraires soient prélevés directement à la source sur le montant total de l'avance.",
+            "keywords": ["avance de démarrage", "100%", "40%", "60%", "numéraires", "engagement", "banque", "règle", "exception"]
+          }
+        ]
+      },
+      {
+        "id": "REST",
+        "name": "Restitution et Délais",
+        "faqs": [
+          {
+            "id": "REST-01",
+            "intent": "delai_restitution_CDEC",
+            "trainingPhrases": [
+              "La CDEC a combien de temps pour me rendre ma garantie ?",
+              "Délai de remboursement après la mainlevée",
+              "Si tout est bon, quand est-ce que je récupère mon argent ?",
+              "Temps de traitement de la restitution"
+            ],
+            "answer": "Dès qu'elle reçoit la **mainlevée** du Maître d'Ouvrage et **toutes les pièces justificatives requises**, la CDEC a un délai maximum de **15 jours ouvrables** pour :\n\n1.  Vous restituer l'acte original de votre garantie.\n2.  Ordonner le virement des fonds sur votre compte.\n\n**Sanction :** Si ce délai n'est pas respecté, vous pouvez mettre la CDEC en demeure. Après 7 jours de plus, elle devra vous payer des **intérêts moratoires**.",
+            "keywords": ["délai", "restitution", "CDEC", "15 jours", "jours ouvrables", "mainlevée", "intérêts", "moratoires", "retard"]
+          },
+          {
+            "id": "REST-02",
+            "intent": "quand_restitue_soumission_non_retenu",
+            "trainingPhrases": [
+              "Quand les non-retenus récupèrent leur caution ?",
+              "Je n'ai pas gagné le marché, quand ma caution est rendue ?",
+              "Restitution après attribution du marché pour les perdants"
+            ],
+            "answer": "Dès la **publication de la décision d'attribution du marché**, votre cautionnement de soumission peut être restitué. Vous avez **15 jours ouvrables** à partir de cette publication pour engager les démarches de retrait auprès de la CDEC. La publication de la décision vaut automatiquement mainlevée pour les soumissionnaires non retenus.",
+            "keywords": ["soumission", "non retenu", "perdant", "attribution", "publication", "décision", "délai", "15 jours"]
+          },
+          {
+            "id": "REST-03",
+            "intent": "restitution_garantie_bonne_execution",
+            "trainingPhrases": [
+              "Quand récupère-t-on la retenue de garantie ?",
+              "Délai pour la libération de la caution de bonne exécution",
+              "Fin de la période de garantie, quelle procédure ?"
+            ],
+            "answer": "La **retenue de garantie** ou le **cautionnement de bonne exécution** est libéré à la fin de la **période de garantie** prévue au marché.\n\nLe Maître d'Ouvrage doit accorder la **mainlevée dans les 30 jours calendaires** qui suivent la **réception définitive** des prestations. Une fois cette mainlevée obtenue, vous avez 15 jours pour que la CDEC procède à la restitution.",
+            "keywords": ["bonne exécution", "retenue de garantie", "libération", "période de garantie", "réception définitive", "30 jours", "mainlevée"]
+          }
+        ]
+      },
+      {
+        "id": "DEF",
+        "name": "Défaillance et Réalisation",
+        "faqs": [
+          {
+            "id": "DEF-01",
+            "intent": "procedure_realisation_garantie",
+            "trainingPhrases": [
+              "Comment le MO utilise ma garantie si j'ai un problème ?",
+              "Procédure de réalisation de la caution",
+              "Appel à première demande, comment ça marche ?",
+              "En cas de défaillance, que fait la CDEC ?"
+            ],
+            "answer": "En cas de défaillance du titulaire/soumissionnaire constatée selon les règles du CMP :\n\n1.  Le **Maître d'Ouvrage** envoie un **appel à première demande** à la **CDEC** (avec preuves de la défaillance).\n2.  La **CDEC** notifie immédiatement l'établissement financier émetteur.\n3.  La **CDEC** engage sans délai les procédures pour **recouvrer les fonds** sur le compte de la banque ou **réaliser l'hypothèque**.\n4.  Les sommes recouvrées sont mises à la disposition du MO dans un délai de 15 jours pour pallier la défaillance.",
+            "keywords": ["réalisation", "défaillance", "appel première demande", "procédure", "recouvrement", "CDEC", "MO"]
+          }
+        ]
+      },
+      {
+        "id": "PME",
+        "name": "Dispositions Spécifiques pour les PME",
+        "faqs": [
+          {
+            "id": "PME-01",
+            "intent": "garanties_alternatives_pme",
+            "trainingPhrases": [
+              "Les PME ont-elles des règles différentes ?",
+              "Je suis une PME, je peux éviter le cautionnement bancaire ?",
+              "Quelles garanties alternatives pour les PME nationales ?"
+            ],
+            "answer": "Oui, les **PME à capitaux et dirigeants nationaux** (telles que définies par la loi) bénéficient de dispositions particulières. Elles peuvent, **si le DCE le prévoit**, substituer au cautionnement de soumission classique l'une des garanties suivantes :\n\n*   🏠 Une hypothèque légale\n*   📑 Un chèque certifié\n*   🏦 Un chèque banque\n*   📝 Une caution personnelle et solidaire d'un dirigeant\n*   🏛️ La caution d'un établissement bancaire agréé\n\nCette possibilité est souvent limitée aux marchés de faible montant (seuil des lettres-commandes).",
+            "keywords": ["PME", "national", "alternative", "dérogation", "spécifique", "chèque", "hypothèque", "caution personnelle", "lettre-commande"]
+          }
+        ]
+      }
+    ]
+  }
+}

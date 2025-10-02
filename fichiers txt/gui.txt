@@ -1,0 +1,104 @@
+import customtkinter
+import fitz
+from chatbot import Chatbot
+import PyPDF2
+from tkinter import filedialog
+
+
+
+customtkinter.set_appearance_mode("Dark")  # Modes: "System" (default), "Dark", "Light"
+customtkinter.set_default_color_theme("blue")  # Themes: "blue" (default), "green", "dark-blue"
+
+class ChatGUI:
+    def __init__(self, root):
+        self.root = root
+        self.chatbot = Chatbot()
+        self._setup_ui()
+
+    def _setup_ui(self):
+        self.root.title("ARS-Chatbot v2.0.0")
+        self.root.iconbitmap("favicon.ico")
+        self.root.geometry("600x650")
+        self.root.maxsize(400, 500)
+
+        # Configuration de la grille
+        self.root.grid_columnconfigure(0, weight=1)
+        self.root.grid_rowconfigure(0, weight=1)
+
+        # --- Widgets ---
+        # Zone de conversation
+        self.zone_conversation = customtkinter.CTkTextbox(self.root, font=("Segoe UI", 13), state="disabled", wrap="word")
+        self.zone_conversation.grid(row=0, column=0, padx=20, pady=20, sticky="nsew")
+
+        # Frame pour la saisie utilisateur
+        frame_saisie = customtkinter.CTkFrame(self.root, fg_color="transparent")
+        frame_saisie.grid(row=1, column=0, padx=20, pady=(0, 20), sticky="ew")
+        frame_saisie.grid_columnconfigure(0, weight=1)
+
+        #Frame pour les bouttons supplementaires
+        frame_bttn= customtkinter.CTkFrame(self.root, fg_color="transparent")
+        frame_bttn.grid(row=2, column=0, padx=20, pady=(0, 20), sticky="ew")
+        frame_bttn.grid_columnconfigure(0,weight=1)
+
+        # Champ de saisie
+        self.champ_quest = customtkinter.CTkEntry(frame_saisie, placeholder_text="Que puis-je faire pour vous ?", font=("Segoe UI", 13), height=35)
+        self.champ_quest.grid(row=0, column=0, padx=(0, 10), sticky="ew")
+        self.champ_quest.bind("<Return>", lambda event: self.envoyer_message())
+
+        # Bouton d'envoie
+        bouton_envoyer = customtkinter.CTkButton(frame_saisie, text="Envoyer", font=("Segoe UI", 13, "bold"), command=self.envoyer_message, height=35, width=90)
+        bouton_envoyer.grid(row=0, column=1, sticky="e")
+
+       #---bouttons pour les fichiers---
+        bouton_lire_txt = customtkinter.CTkButton(frame_bttn, text="Lire fichier texte", font=("Segoe UI", 13, "bold"), command=self.lire_fichier_txt, height=35, width=150)
+        bouton_lire_txt.grid(row=0, column=0, padx=(0, 10), sticky="ew")
+        bouton_lire_pdf = customtkinter.CTkButton(frame_bttn, text="Lire fichier PDF", font=("Segoe UI", 13, "bold"), command=self.lire_fichier_pdf, height=35, width=150)
+        bouton_lire_pdf.grid(row=0, column=1, padx=(0, 10), sticky="ew") 
+
+    def lire_fichier_txt(self):
+        fichier = filedialog.askopenfilename(filetypes=[("Fichiers texte", "*.docx;*.txt")])
+        if fichier:
+            with open(fichier, "r", encoding="utf-8") as f:
+                contenu = f.read()
+            self.chatbot.ajouter_contenu(contenu)
+            self.afficher_msg("Bot", "Contenu du fichier texte chargé.")
+
+
+    def lire_fichier_pdf(self):
+        fichier = filedialog.askopenfilename(filetypes=[("Fichiers PDF", "*.pdf")])
+        if fichier:
+            try:
+                with open(fichier, "rb") as f:
+                    lecteur_pdf = PyPDF2.PdfReader(f)
+                    contenu = ""
+                    for page in lecteur_pdf.pages:
+                        contenu += page.extract_text() + "\n"
+                self.chatbot.ajouter_contenu(contenu)
+                self.afficher_msg("Bot", "Contenu du fichier PDF chargé.")
+            except Exception as e:
+                self.afficher_msg("Bot", f"Erreur lors de la lecture du PDF: {str(e)}")
+
+
+    def envoyer_message(self):
+        message = self.champ_quest.get()
+        if not message.strip():
+            return
+
+        self.afficher_msg("Vous", message)
+        self.champ_quest.delete(0, "end")
+
+        reponse = self.chatbot.repondre(message)
+        self.afficher_msg("Bot", reponse)
+
+
+    def afficher_msg(self, expediteur, contenu):
+        self.zone_conversation.configure(state="normal")
+        # On peut ajouter un peu de style ici aussi
+        self.zone_conversation.insert("end", f"{expediteur}: {contenu}\n\n")
+        self.zone_conversation.configure(state="disabled")
+        self.zone_conversation.yview("end")
+
+def start_chat():
+    root = customtkinter.CTk()
+    app = ChatGUI(root)
+    root.mainloop()

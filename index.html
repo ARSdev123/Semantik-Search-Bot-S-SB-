@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>COLEPS Bot</title>
+</head>
+<body>
+    <!-- Bouton flottant -->
+    <div id="chat-button">🤖</div>
+
+    <!-- Fenêtre de chat -->
+    <div id="chat-container">
+        <div id="chat-header">
+            ColepsBot
+
+            <span style="cursor:pointer;" onclick="toggleChat()">✖</span>
+        </div>
+        <div id="chat-messages"></div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Écrivez votre question...">
+            <button id="send-button">Envoyer</button>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
