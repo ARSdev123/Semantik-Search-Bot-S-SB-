@@ -1,8 +1,0 @@
-code pour créer un repo GitHub avec git
-
-git init nom-du-repo
-cd nom-du-repo
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/votre-utilisateur/nom-du-repo.git
-git push -u origin master

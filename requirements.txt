@@ -8,3 +8,4 @@ fr_core_news_sm @ https://github.com/explosion/spacy-models/releases/download/fr
 fastapi>=0.70.0
 uvicorn[standard]>=0.15.0
 pydantic>=1.8.0
+yt-dlp>=2023.12.30

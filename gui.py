@@ -1,9 +1,36 @@
-import customtkinter
-import fitz
-from chatbotcol import Chatbot
-import PyPDF2
-from tkinter import filedialog
 import random
+
+# Gestion des imports avec gestion d'erreurs
+MODULES_MANQUANTS = []
+
+try:
+    import customtkinter
+except ImportError:
+    MODULES_MANQUANTS.append("customtkinter")
+    customtkinter = None
+
+try:
+    import fitz
+except ImportError:
+    MODULES_MANQUANTS.append("PyMuPDF")
+    fitz = None
+
+try:
+    from chatbotcol import Chatbot
+except ImportError:
+    MODULES_MANQUANTS.append("chatbotcol")
+    Chatbot = None
+
+try:
+    from tkinter import filedialog
+except ImportError:
+    MODULES_MANQUANTS.append("tkinter")
+    filedialog = None
+
+# Vérification des modules critiques au démarrage
+if MODULES_MANQUANTS:
+    print(f"Attention: Modules manquants détectés dans l'interface graphique: {', '.join(MODULES_MANQUANTS)}")
+    print("Certaines fonctionnalités peuvent ne pas fonctionner correctement.")
 
 customtkinter.set_appearance_mode("Dark")  # Modes: "System" (default), "Dark", "Light"
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (default), "green", "dark-blue"
@@ -11,7 +38,19 @@ customtkinter.set_default_color_theme("blue")  # Themes: "blue" (default), "gree
 class ChatGUI:
     def __init__(self, root):
         self.root = root
-        self.chatbot = Chatbot()
+
+        # Vérification du chatbot
+        if Chatbot is None:
+            print("Erreur: Chatbot non disponible")
+            self.chatbot = None
+        else:
+            self.chatbot = Chatbot()
+
+        # Vérification de l'interface graphique
+        if customtkinter is None:
+            print("Erreur: CustomTkinter non disponible")
+            return
+
         self._setup_ui()
         self.afficher_msg("Bot", self.message_acceuil(), "bot")
 
@@ -54,18 +93,31 @@ class ChatGUI:
         ])
     
     def envoyer_message(self):
+        """Gère l'envoi d'un message et l'affichage de la réponse."""
+        if self.chatbot is None:
+            self.afficher_msg("Bot", "Erreur: Chatbot non disponible", "bot")
+            return
+
         message = self.champ_quest.get()
 
         if not message.strip():
             return
-        
+
         # Afficher le message utilisateur en bleu
         self.afficher_msg("Vous", message, "user")
         self.champ_quest.delete(0, "end")
 
-        # Obtenir et afficher la réponse du bot en vert
-        reponse = self.chatbot.repondre(message)  # Correction : enlever ('red')
-        self.afficher_msg("Bot", reponse, "bot")
+        try:
+            # Obtenir et afficher la réponse du bot en vert
+            reponse = self.chatbot.repondre(message)
+            # Gérer le cas où la réponse est un dictionnaire (format API)
+            if isinstance(reponse, dict):
+                reponse = reponse.get("reponse", "Réponse mal formatée")
+            self.afficher_msg("Bot", reponse, "bot")
+        except Exception as e:
+            error_msg = f"Erreur lors du traitement du message: {e}"
+            print(error_msg)
+            self.afficher_msg("Bot", error_msg, "bot")
 
     def afficher_msg(self, expediteur, contenu, type_message="user"):
         self.zone_conversation.configure(state="normal")

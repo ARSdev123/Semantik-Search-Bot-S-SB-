@@ -59,12 +59,14 @@ document.addEventListener("DOMContentLoaded", function() {
     function fetchResponse(message) {
         // Affiche un indicateur de frappe
         displayTypingIndicator();
+        const apikey= "YOUR_API_KEY";
 
         // Adaptez l'URL à votre endpoint backend
     fetch("http://127.0.0.1:8000/recherche", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                 "X-API-Key": apiKey,
             },
             body: JSON.stringify({ question: message })
         })
