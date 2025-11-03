@@ -66,7 +66,8 @@ else:
     #utilisation d'une fonction asynchrone pour la vérification de la clé d'API,la raison est que FastAPI supporte nativement les dépendances asynchrones
     async def get_api_key(api_key_header: str = Security(api_key_header)):
         """Dépendance pour vérifier la clé d'API fournie dans l'en-tête X-API-Key."""
-        if api_key_header is None or api_key_header != config.API_KEY:
+        api_key = os.environ.get("API_KEY") # Lecture de la clé depuis les variables d'environnement
+        if api_key_header is None or api_key_header != api_key:
             # Si la clé est manquante ou invalide, lever une exception HTTP 403
             raise HTTPException(
                 status_code=HTTP_403_FORBIDDEN, detail="Clé d'API manquante ou invalide"
